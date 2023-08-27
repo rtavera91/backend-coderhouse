@@ -5,7 +5,7 @@ class ProductManager {
 
   // 2. método para agregar productos
   addProduct(title, description, price, thumbnail, code, stock) {
-    if ((!title || !description || !price || !thumbnail || !code, !stock)) {
+    if (!title || !description || !price || !thumbnail || !code || !stock) {
       return console.log("error: All fields are required");
     } else if (this.products.some((product) => product.code === code.trim())) {
       return console.log("error: Product code already exists");
